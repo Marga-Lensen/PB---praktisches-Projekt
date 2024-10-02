@@ -54,5 +54,7 @@
 - weitere Funktionalität der Webseite
 
 
-
+### Austausch
+* zip per slack
+* GitHub private - collaborator - invitation --> clone
 
