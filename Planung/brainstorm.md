@@ -55,7 +55,9 @@
 
 # chaima 
 
-
+### Austausch
+* zip per slack
+* GitHub private - collaborator - invitation --> clone
 
 
 #
