@@ -11,6 +11,34 @@
         <h1>Saisonkarte Verlängern</h1>
     </header>
     <main>
+        <style>
+            body {
+                background-image: url('green.webp'); 
+                background-size: cover;  
+                background-position: center; 
+                background-repeat: no-repeat;  
+                height: 100vh; 
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
+    
+            h1 {
+                text-align: center;
+                padding-top: 50px;
+                color: #333;
+            }
+    
+            p {
+                text-align: center;
+                color: #666;
+            }
+        </style>
+    </head>
+   
+    </html>
+    
+    
         <section>
             <h2>Verlängere deine Zoo-Saisonkarte</h2>
             <form action="process-order.php" method="POST" id="ticketForm">
@@ -35,8 +63,78 @@
             </form>
         </section>
     </main>
+    <style>
+        .tier-info {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+        .tier-item {
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            background-color: lightblue;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Zoo-Karte - Tier Steckbriefe</h1>
+
+    <div id="zoo-map">
+        <div class="tier-item" data-tier="elefant">🐘 Afrikanischer Elefant</div>
+        <div class="tier-item" data-tier="löwe">🦁 Löwe</div>
+        <div class="tier-item" data-tier="pinguin">🐧 Pinguin</div>
+    </div>
+
+    <div id="tier-info" class="tier-info"></div>
+    <div class="info-box" id="opening-hours">
+        <h2>Öffnungszeiten</h2>
+        <p id="hours">Heute: 9:00 - 18:00 Uhr</p>
+    </div>
+
+    <div class="info-box" id="feeding-time">
+        <h2>Nächste Fütterung</h2>
+        <p id="feeding">Orang-Utans/Bonobos: 13:30 Uhr</p>
+    </div>
+
+    <button class="button" onclick="updateInfo()">Öffnungszeiten & Fütterung aktualisieren</button>
+
+   
+          <style>
+        .info-box {
+            background-color: #f3f3c6;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .info-box h2 {
+            color: green;
+        }
+        .button {
+            padding: 10px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+    
+</head>
+
+       
+    <script src="script.js"></script>
+    
+    
     <footer>
-        <p>&copy; 2024 Zoo Berlin</p>
+        <p>&copy; 2024 Zoo Hannover</p>
     </footer>
     <p>
         Hier kommt die interaktive Karte (Map) vom Park

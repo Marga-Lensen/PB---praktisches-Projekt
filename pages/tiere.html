@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Tier-Steckbriefe</title>
+    <style>
+        .tier-info {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+        .tier-item {
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            background-color: lightblue;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Zoo-Karte - Tier Steckbriefe</h1>
+
+    <div id="zoo-map">
+        <div class="tier-item" data-tier="elefant">🐘 Afrikanischer Elefant</div>
+        <div class="tier-item" data-tier="löwe">🦁 Löwe</div>
+        <div class="tier-item" data-tier="pinguin">🐧 Pinguin</div>
+    </div>
+
+    <div id="tier-info" class="tier-info"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
