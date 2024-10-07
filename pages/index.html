@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Saisonkarte Verlängern</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Saisonkarte Verlängern</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Verlängere deine Zoo-Saisonkarte</h2>
+            <form action="process-order.php" method="POST" id="ticketForm">
+                <label for="ticketType">Ticket-Typ:</label>
+                <select id="ticketType" name="ticketType" required>
+                    <option value="">Bitte auswählen</option>
+                    <option value="erwachsener">Erwachsener</option>
+                    <option value="kind">Kind</option>
+                    <option value="familie">Familienkarte</option>
+                </select>
+                <label for="ticketDuration">Verlängerungsdauer:</label>
+                <select id="ticketDuration" name="ticketDuration" required>
+                    <option value="">Bitte auswählen</option>
+                    <option value="1Jahr">1 Jahr</option>
+                    <option value="2Jahre">2 Jahre</option>
+                </select>
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" placeholder="E-Mail-Adresse" required>
+                <label for="cardNumber">Kartennummer:</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="Kartennummer" required>
+                <button type="submit">Verlängern</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Zoo Berlin</p>
+    </footer>
 </body>
 </html>
