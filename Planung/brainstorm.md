@@ -5,18 +5,6 @@
 - Excalidraw / Canva / Powerpoint
 - Hintergrund scan von bestehendem Zoo ...?
 
-### Homepage Karte vom Zoo (Übersicht)
-#### clickbare Elemente (Animation)
-* führen zu eigenen html Seiten 
-- - Bildercaroussel (galery)
-
-- - Tabellen Fütterzeiten, Schlafzeiten
-
-- - Infotafel / Wissenswertes
-
-* Form / Kontaktformular
-- - Interesse, auszuhelfen (füttern, saubermachen, Führungen...)
-
 #### verschiedene Bereiche
 * gefährliche Tiere
 * Aquarium
@@ -30,12 +18,26 @@
 * Aussichtsturm
 * Seilbahn
 
+### Homepage Karte vom Zoo (Übersicht)
+
+- - index.html
+
+#### clickbare Elemente (Animation)
+
+* führen zu verschiedenen html Seiten 
+- - Tiere.html: Bildercaroussel (galery) ; 
+    Infotafel / Wissenswertes
+- - Pläne.html: Tabellen Fütterzeiten, Schlafzeiten, Personal
+- - infoPark.html: Info Park (Anfahrt, Preise usw)
+
+* Form / Kontaktformular
+- - login.html: auch für Kontaktformular, Mitarbeit zu nutzen ;
+     Interesse, auszuhelfen (füttern, saubermachen, Führungen...)
+
 ### JavaScript 
 * Funktionen; z.B. Berechnungen (Fütter, Vorräte, Schlafzeiten, Personal)
 * JS Methoden, z.B. map() oder filter()....
  - - Datenbank v Tieren durchsuchen, Auszug ausgeben (item.description; keys auflisten oder Functionen aufrufen) 
-
- ❓️ wie verbindet man die JS Funktionen mit der Webseite ?
 
  - - Datenbank v Tieren filtern (Säugetieren, Reptilien, ...)
 
@@ -53,12 +55,11 @@
 - desktop vs mobile
 - weitere Funktionalität der Webseite
 
-# chaima 
-
 ### Austausch
 * zip per slack
 * GitHub private - collaborator - invitation --> clone
-# github projekt benutzen
-
 #
-## branching 
+#
+#### github projekt benutzen
+#
+#### branching 
