@@ -56,3 +56,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
+/* einzelne items positionieren */
+
+.Pferd {
+    position: fixed;
+    top: 5vh;
+    left: 10vw;
+} 
