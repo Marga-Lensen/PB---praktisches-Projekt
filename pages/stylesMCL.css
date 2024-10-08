@@ -60,6 +60,13 @@ body {
 
 .Pferd {
     position: fixed;
-    top: 5vh;
-    left: 10vw;
+    top: 3vh;
+    left: 6vw;
+    width: 70px;
 } 
+.Giraffe {
+    position: fixed;
+    top: 13vh;
+    left: 10vw;
+    width: 80px;
+}  
