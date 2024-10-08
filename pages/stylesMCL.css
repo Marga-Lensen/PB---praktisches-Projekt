@@ -25,8 +25,10 @@ header {
 }
 
 body {
-    position: absolute;
-    margin-top: 150px;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    /* margin-top: 150px; */
     background-image: url(../images-lageplan/istockphoto-527233899-612x612.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,8 +75,8 @@ body {
 }  
 .Kamel {
     position: fixed;
-    top: 33vh;
-    left: 10vw;
+    top: 33%;
+    left: 10%;
     width: 80px;
 }  
 .Papagai {
@@ -167,3 +169,8 @@ body {
     left: 34vw;
     width: 80px;
 } 
+
+a {
+    text-decoration: none;
+    color: brown;
+}
