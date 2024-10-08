@@ -25,6 +25,7 @@ header {
 }
 
 body {
+    position: absolute;
     margin-top: 150px;
     background-image: url(../images-lageplan/istockphoto-527233899-612x612.jpg);
     background-repeat: no-repeat;
@@ -39,7 +40,7 @@ body {
     background-image: url(./green.webp);
     border: .3px solid rgb(3, 68, 19);
     border-radius: 15px;
-    box-shadow: 3px 10px 5px darkolivegreen;
+    box-shadow: 3px 4px 3px darkolivegreen;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
@@ -52,7 +53,7 @@ body {
     background-color: antiquewhite;
     border: .3px solid rgb(3, 68, 19);
     border-radius: 15px;
-    box-shadow: 3px 10px 5px rgb(161, 114, 118);
+    box-shadow: 3px 4px 3px rgb(161, 114, 118);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
@@ -70,3 +71,99 @@ body {
     left: 10vw;
     width: 80px;
 }  
+.Kamel {
+    position: fixed;
+    top: 33vh;
+    left: 10vw;
+    width: 80px;
+}  
+.Papagai {
+    position: fixed;
+    top: 43vh;
+    left: 10vw;
+    width: 80px;
+} 
+.Schildkröte {
+    position: fixed;
+    top: 39vh;
+    left: 16vw;
+    width: 100px;
+} 
+.Tiger {
+    position: fixed;
+    top: 53vh;
+    left: 50vw;
+    width: 80px;
+} 
+.Löwe {
+    position: fixed;
+    top: 53vh;
+    left: 70vw;
+    width: 50px;
+} 
+.Bär {
+    position: fixed;
+    top: 44vh;
+    left: 90vw;
+    width: 40px;
+} 
+.Nilpferd {
+    position: fixed;
+    top: 15vh;
+    left: 30vw;
+    width: 80px;
+}  
+.Nashorn {
+    position: fixed;
+    top: 20vh;
+    left: 48vw;
+    width: 80px;
+} 
+.Affe {
+    position: fixed;
+    top: 8vh;
+    left: 48vw;
+    width: 80px;
+} 
+.Cheetah {
+    position: fixed;
+    top: 24vh;
+    left: 85vw;
+    width: 80px;
+} 
+.Elefant {
+    position: fixed;
+    top: 14vh;
+    left: 80vw;
+    width: 80px;
+} 
+.Flamingo {
+    position: fixed;
+    top: 30vh;
+    left: 70vw;
+    width: 80px;
+} 
+.Krokodil {
+    position: fixed;
+    top: 41vh;
+    left: 62vw;
+    width: 80px;
+} 
+.Toiletten {
+    position: fixed;
+    top: 32vh;
+    left: 40vw;
+    width: 100px;
+} 
+.Restaurant {
+    position: fixed;
+    top: 19vh;
+    left: 60vw;
+    width: 100px;
+} 
+.Eingang {
+    position: fixed;
+    top: 56vh;
+    left: 34vw;
+    width: 80px;
+} 
