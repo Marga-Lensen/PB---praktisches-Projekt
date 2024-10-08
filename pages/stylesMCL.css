@@ -1,7 +1,65 @@
-body {
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    /* margin-bottom: 150px; */
+    height: 3em;
+    background-image: url(./green.webp);
+    /* width: 100%; */
     
+    position: fixed;
+    top: 0;
+    left: 21vw;
+    
+    padding-right: 20px;
+    padding-left: 15px;
+    padding-top: 14px;
+
+    border: .3px solid rgb(3, 68, 19);
+    border-radius: 15px;
+
+    box-shadow: 3px 10px 5px darkolivegreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin-top: 150px;
     background-image: url(../images-lageplan/istockphoto-527233899-612x612.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background: linear-gradient(rgb(240, 248, 255, .7), rgb(0, 128, 0, .8) );
+    /* background: linear-gradient(rgb(240, 248, 255, .7), rgb(0, 128, 0, .8) ); */
 }
+.clickTier {
+    height: 20px;
+    /* min-width: fit-content; */
+    width: 100px;
+    text-align: center;
+    background-image: url(./green.webp);
+    border: .3px solid rgb(3, 68, 19);
+    border-radius: 15px;
+    box-shadow: 3px 10px 5px darkolivegreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.clickOrt {
+    height: 20px;
+    /* min-width: fit-content; */
+    width: 100px;
+    text-align: center;
+    /* background-image: url(./green.webp); */
+    background-color: antiquewhite;
+    border: .3px solid rgb(3, 68, 19);
+    border-radius: 15px;
+    box-shadow: 3px 10px 5px rgb(161, 114, 118);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+/* einzelne items positionieren */
+
+.Pferd {
+    position: fixed;
+    top: 5vh;
+    left: 10vw;
+} 
