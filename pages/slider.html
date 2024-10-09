@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+.slider-container {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+        }
+
+        #prev, #next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+    </style>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="/images-zootiere/Affe_istockphoto-981458920-612x612.jpg" alt="Bild 1">
+            <img src="/images-zootiere/cheetah_pexels-photo-25956267.webp" alt="Bild 2">
+            <img src="/images-zootiere/flamingo_free-photo-of-zoo-vogel-flamingos-tierfotografie.jpeg" alt="Bild 3">
+            <img src="/images-zootiere/Löwe_istockphoto-933863084-612x612.jpg" alt="Bild 4">
+            <img src="/images-zootiere/Elefant_free-photo-of-schwarz-und-weiss-schwarzweiss-tier-afrika.jpeg" alt="Bild 5">
+        </div>
+        <button id="prev">❮</button>
+        <button id="next">❯</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

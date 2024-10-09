@@ -36,7 +36,7 @@ body {
     width: 100%;
     /* width: 100vw; */
     /* margin-top: 150px; */
-    background-image: url(../images-lageplan/istockphoto-527233899-612x612.jpg);
+    background-image: url(../images-lageplan/Zoo-Karte_istockphoto-527233899-612x612.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     /* background: linear-gradient(rgb(240, 248, 255, .7), rgb(0, 128, 0, .8) ); */
@@ -163,7 +163,8 @@ body {
     width: 80px;
 } 
 .Toiletten {
-    top: 52%;
+    top: 52%;    border-radius: 15px;
+
     left: 45%;
     width: 100px;
 } 
@@ -185,9 +186,18 @@ a {
 
 #PDF {
     position: absolute;
-    bottom: 5%;
-    right: 5%;
+    bottom: 10%;
+    right: 7%;
     border-radius: 15px;
+    padding: 7px;
+}
+#slider {
+    position: absolute;
+    bottom: 5%;
+    right: 7%;
+    border-radius: 15px;
+    padding: 7px;
+
 }
 
 .container {
