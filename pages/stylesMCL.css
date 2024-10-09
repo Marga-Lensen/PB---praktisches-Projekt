@@ -179,6 +179,13 @@ a {
     color: brown;
 }
 
+#PDF {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 15px;
+}
+
 .container {
     display: grid;
     width: 100vw;
