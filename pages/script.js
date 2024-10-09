@@ -1,4 +1,3 @@
-
 const tiere = {
     elefant: {
         name: "Afrikanischer Elefant",
@@ -26,61 +25,61 @@ const tiere = {
         gefährdungsstatus: "Gefährdet (IUCN)",
         saison: "Löwen sind während der Trockenzeit besonders aktiv, um Beutetiere zu jagen"
     },
-    pinguin: {
-        name: "Kaiserpinguin",
-        wissenschaftlicherName: "Aptenodytes forsteri",
-        verbreitungsgebiet: "Antarktis",
-        lebensraum: "Eiswüsten und Meeresküsten",
-        nahrung: "Fisch und Krill",
-        besonderheiten: "Kaiserpinguine sind die größten Pinguine und können bis zu 1,2 Meter groß werden",
-        größe: "Bis zu 1,2 Meter",
-        gewicht: "Bis zu 45 kg",
-        fortpflanzung: "Brutzeit im Winter, Männchen brüten das Ei",
-        gefährdungsstatus: "Nahezu bedroht (IUCN)",
-        saison: "Pinguine überleben den extrem kalten antarktischen Winter während ihrer Brutzeit"
+    affe: {
+        name: "Affe",
+        wissenschaftlicherName: "Cercopithecidae",
+        verbreitungsgebiet: "Afrika, Asien, Südamerika",
+        lebensraum: "Tropische und subtropische Wälder",
+        nahrung: "Allesfresser (Früchte, Insekten, kleine Tiere)",
+        besonderheiten: "Affen sind äußerst soziale Tiere mit komplexen sozialen Strukturen",
+        größe: "Je nach Art zwischen 30 cm und 1 Meter",
+        gewicht: "Zwischen 1 und 35 kg, je nach Art",
+        fortpflanzung: "Die Tragzeit variiert zwischen 4 bis 8 Monaten je nach Art, 1–2 Jungtiere",
+        gefährdungsstatus: "Variiert je nach Art (einige Arten sind stark gefährdet)",
+        saison: "Viele Arten sind während der Regenzeit aktiver aufgrund des Nahrungsangebots"
     }
 };
-
 
 function zeigeTierInfo(tierKey) {
     const tier = tiere[tierKey];
     const tierInfoDiv = document.getElementById('tier-info');
 
-    tierInfoDiv.innerHTML = `
-        <h2>${tier.name}</h2>
-        <p><strong>Wissenschaftlicher Name:</strong> ${tier.wissenschaftlicherName}</p>
-        <p><strong>Verbreitungsgebiet:</strong> ${tier.verbreitungsgebiet}</p>
-        <p><strong>Lebensraum:</strong> ${tier.lebensraum}</p>
-        <p><strong>Nahrung:</strong> ${tier.nahrung}</p>
-        <p><strong>Besondere Merkmale:</strong> ${tier.besonderheiten}</p>
-        <p><strong>Größe:</strong> ${tier.größe}</p>
-        <p><strong>Gewicht:</strong> ${tier.gewicht}</p>
-        <p><strong>Fortpflanzung:</strong> ${tier.fortpflanzung}</p>
-        <p><strong>Gefährdungsstatus:</strong> ${tier.gefährdungsstatus}</p>
-        <p><strong>Saisonale Besonderheiten:</strong> ${tier.saison}</p>
-    `;
-
-   
-    tierInfoDiv.style.display = 'block';
+    if (tier) {
+        tierInfoDiv.innerHTML = `
+            <h2>${tier.name}</h2>
+            <p><strong>Wissenschaftlicher Name:</strong> ${tier.wissenschaftlicherName}</p>
+            <p><strong>Verbreitungsgebiet:</strong> ${tier.verbreitungsgebiet}</p>
+            <p><strong>Lebensraum:</strong> ${tier.lebensraum}</p>
+            <p><strong>Nahrung:</strong> ${tier.nahrung}</p>
+            <p><strong>Besondere Merkmale:</strong> ${tier.besonderheiten}</p>
+            <p><strong>Größe:</strong> ${tier.größe}</p>
+            <p><strong>Gewicht:</strong> ${tier.gewicht}</p>
+            <p><strong>Fortpflanzung:</strong> ${tier.fortpflanzung}</p>
+            <p><strong>Gefährdungsstatus:</strong> ${tier.gefährdungsstatus}</p>
+            <p><strong>Saisonale Besonderheiten:</strong> ${tier.saison}</p>
+        `;
+        tierInfoDiv.style.display = 'block';
+    } else {
+        tierInfoDiv.innerHTML = '<p>Keine Informationen zu diesem Tier verfügbar.</p>';
+    }
 }
-
 
 document.querySelectorAll('.tier-item').forEach(item => {
     item.addEventListener('click', (e) => {
         const tierKey = e.target.getAttribute('data-tier');
-        zeigeTierInfo(tierKey);
+        zeigeTierInfo(tierKey.toLowerCase());  // TierKey wird in Kleinbuchstaben umgewandelt
     });
 });
+
 function updateInfo() {
-            
     const openingHoursElement = document.getElementById('hours');
     const feedingTimeElement = document.getElementById('feeding');
-    
     
     const currentDate = new Date();
     const currentDay = currentDate.getDay(); 
 
-    
+
+
     if (currentDay === 6 || currentDay === 0) { 
         openingHoursElement.innerHTML = 'Heute: 9:00 - 19:00 Uhr';
     } else {
@@ -91,8 +90,11 @@ function updateInfo() {
     const feedings = [
         "Löwen: 12:00 Uhr",
         "Elefanten: 14:00 Uhr",
-        "Pinguine: 15:00 Uhr"
+        "Affen: 15:00 Uhr"
     ];
     const randomFeeding = feedings[Math.floor(Math.random() * feedings.length)];
     feedingTimeElement.innerHTML = randomFeeding;
 }
+
+
+document.addEventListener('DOMContentLoaded', updateInfo);
