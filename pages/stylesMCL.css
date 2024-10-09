@@ -28,7 +28,9 @@ body {
     position: relative; 
     /* body is container: relative; 100% width and 100vh */
     height: 100vh;
+    /* height: 100%; das geht ganz doll schief*/
     width: 100%;
+    /* width: 100vw; */
     /* margin-top: 150px; */
     background-image: url(../images-lageplan/istockphoto-527233899-612x612.jpg);
     background-repeat: no-repeat;
@@ -36,7 +38,7 @@ body {
     /* background: linear-gradient(rgb(240, 248, 255, .7), rgb(0, 128, 0, .8) ); */
 }
 .clickTier {
-    
+    position: absolute;
     height: 20px;
     /* min-width: fit-content; */
     width: 100px;
@@ -49,6 +51,7 @@ body {
 
 }
 .clickOrt {
+    position: absolute;
     height: 20px;
     /* min-width: fit-content; */
     width: 100px;
@@ -82,105 +85,92 @@ body {
     width: 80px;
 }   */
 .Giraffe {
-    position: absolute;
+    /* position: absolute; */
     top: 22%;
     left: 15%;
     width: 70px;
 } 
 .Kamel {
-    position: absolute;
+    /* position: absolute; */
     top: 43%;
     left: 10%;
     width: 80px;
 }  
 .Papagai {
-    position: absolute;
-    top: 63%;
+    /* position: absolute; */
+    top: 72%;
     left: 10%;
     width: 80px;
 } 
 .Schildkröte {
-    position: absolute;
-    top: 39vh;
-    left: 16vw;
+    top: 49%;
+    left: 24%;
     width: 100px;
 } 
 .Tiger {
-    position: absolute;
-    top: 53vh;
-    left: 50vw;
+    top: 85%;
+    left: 58%;
     width: 80px;
 } 
 .Löwe {
-    position: absolute;
-    top: 53vh;
-    left: 70vw;
+    top: 83%;
+    left: 85%;
+    right: 15%;
     width: 50px;
 } 
 .Bär {
-    position: absolute;
-    top: 44vh;
-    left: 90vw;
+    top: 60%;
+    left: 90%;
     width: 40px;
 } 
 .Nilpferd {
-    position: absolute;
-    top: 15vh;
-    left: 30vw;
+    top: 22%;
+    left: 30%;
     width: 80px;
 }  
 .Nashorn {
-    position: absolute;
-    top: 20vh;
-    left: 48vw;
+    top: 20%;
+    left: 48%;
     width: 80px;
 } 
 .Affe {
-    position: absolute;
-    top: 8vh;
-    left: 48vw;
+    top: 8%;
+    left: 48%;
     width: 80px;
 } 
 .Cheetah {
-    position: absolute;
-    top: 24vh;
-    left: 85vw;
+    top: 34%;
+    left: 85%;
     width: 80px;
 } 
 .Elefant {
-    position: absolute;
-    top: 14vh;
-    left: 80vw;
+    top: 14%;
+    left: 80%;
     width: 80px;
 } 
 .Flamingo {
-    position: absolute;
-    top: 30vh;
-    left: 70vw;
+    top: 57%;
+    left: 80%;
     width: 80px;
 } 
 .Krokodil {
-    position: absolute;
-    top: 41vh;
-    left: 62vw;
+    top: 61%;
+    left: 62%;
     width: 80px;
 } 
 .Toiletten {
-    position: absolute;
-    top: 32vh;
-    left: 40vw;
+    top: 52%;
+    left: 45%;
     width: 100px;
 } 
 .Restaurant {
-    position: absolute;
-    top: 19vh;
-    left: 60vw;
+    top: 26%;
+    left: 65%;
     width: 100px;
 } 
 .Eingang {
-    position: absolute;
-    top: 56vh;
-    left: 34vw;
+    top: 86%;
+    left: 34%;
     width: 80px;
 } 
 
@@ -188,3 +178,37 @@ a {
     text-decoration: none;
     color: brown;
 }
+
+#PDF {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 15px;
+}
+
+.container {
+    display: grid;
+    /* justify-content: center ;
+    align-items: center; */
+    width: 100vw;
+    margin: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+
+}
+.img-box {
+    /* justify-content: center;
+    align-items: center; */
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: block;
+}
+
+.img-box img {
+
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+} 
