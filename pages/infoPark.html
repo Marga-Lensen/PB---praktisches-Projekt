@@ -3,19 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesMCL.css">
+    <link rel="shortcut icon" href="../images/mini_istockphoto-1406563560-612x612.jpg" type="image/x-icon">
     <title>Info Park</title>
 </head>
 <body>
-    <p>
-        hier kommen Eintrittspreise,
-        Öffnungszeiten,
-        Saisonskarten,
-        Anfahrt 
-        usw  hin.
-
-    </p>
+    <style>
+        body {
+            margin-top: 70px;
+            /* background-image: url(./green.webp);
+            background-size: cover; */
+            background: linear-gradient(rgba(120, 147, 87, 0.3), rgb(240, 248, 255, .7), rgba(0, 80, 0, 0.8) );
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Eintrittspreise & Öffnungszeiten</h1>
+</header>
+    
     <table>
-        Preisen
+        <tr>
+            <th>Kategorie</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Eintrittspreise</td>
+            <td>Erwachsene: 10€, Kinder: 5€, Studenten: 7€</td>
+        </tr>
+        <tr>
+            <td>Öffnungszeiten</td>
+            <td>Montag - Freitag: 09:00 - 18:00 Uhr, Samstag - Sonntag: 09:00 - 20:00 Uhr</td>
+        </tr>
+        <tr>
+            <td>Saisonskarten</td>
+            <td>Jahreskarte: 80€, Familienkarte: 150€</td>
+        </tr>
+        <tr>
+            <td>Anfahrt</td>
+            <td>Adresse: Zoo Hannover Straße 1, 12345 Tierstadt, Öffentliche Verkehrsmittel: Bus Linie 10</td>
+        </tr>
     </table>
 
 </body>
