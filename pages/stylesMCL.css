@@ -186,19 +186,34 @@ a {
 
 #PDF {
     position: absolute;
-    bottom: 10%;
-    right: 7%;
+    top: 10%;
+    right: 37%;
     border-radius: 15px;
     padding: 7px;
 }
 #slider {
     position: absolute;
-    bottom: 5%;
-    right: 7%;
+    top: 5%;
+    right: 37%;
     border-radius: 15px;
     padding: 7px;
 
 }
+#Saisonskarte {
+    position: absolute;
+    top: 20%;
+    right: 37%;
+    border-radius: 15px;
+    padding: 7px;
+}
+#gallery {
+        position: absolute;
+        top: 15%;
+        right: 37%;
+        border-radius: 15px;
+        padding: 7px;
+    }
+
 
 .container {
     display: grid;
