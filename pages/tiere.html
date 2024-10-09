@@ -3,35 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoo Tier-Steckbriefe</title>
+    <title>Zoo Informationen</title>
     <style>
-        .tier-info {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-top: 20px;
-            display: none;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
         }
-        .tier-item {
-            cursor: pointer;
-            margin: 5px;
-            padding: 10px;
-            background-color: lightblue;
-            display: inline-block;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
 
-    <h1>Zoo-Karte - Tier Steckbriefe</h1>
+    <h2>Eintrittspreise & Öffnungszeiten</h2>
+    <table>
+        <tr>
+            <th>Kategorie</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Eintrittspreise</td>
+            <td>Erwachsene: 10€, Kinder: 5€, Studenten: 7€</td>
+        </tr>
+        <tr>
+            <td>Öffnungszeiten</td>
+            <td>Montag - Freitag: 09:00 - 18:00 Uhr, Samstag - Sonntag: 09:00 - 20:00 Uhr</td>
+        </tr>
+        <tr>
+            <td>Saisonskarten</td>
+            <td>Jahreskarte: 80€, Familienkarte: 150€</td>
+        </tr>
+        <tr>
+            <td>Anfahrt</td>
+            <td>Adresse: Zoo Hannover Straße 1, 12345 Tierstadt, Öffentliche Verkehrsmittel: Bus Linie 10</td>
+        </tr>
+    </table>
 
-    <div id="zoo-map">
-        <div class="tier-item" data-tier="elefant">🐘 Afrikanischer Elefant</div>
-        <div class="tier-item" data-tier="löwe">🦁 Löwe</div>
-        <div class="tier-item" data-tier="pinguin">🐧 Pinguin</div>
-    </div>
+    <h2>Tiere im Zoo</h2>
+    <table>
+        <tr>
+            <th>Tier</th>
+            <th>Bild</th>
+            <th>Beschreibung</th>
+        </tr>
+        <tr>
+            <td>Löwe</td>
+            <td><img src="/images-zootiere/Löwe_istockphoto-933863084-612x612.jpg" alt="Löwe"></td>
+            <td>Der Löwe ist ein Raubtier, das in Afrika beheimatet ist.</td>
+        </tr>
+        <tr>
+            <td>Elefant</td>
+            <td><img src="" alt="Elefant"></td>
+            <td>Elefanten sind die größten Landsäugetiere der Welt.</td>
+        </tr>
+        <tr>
+            <td>Giraffe</td>
+            <td><img src="" alt="Giraffe"></td>
+            <td>Giraffen sind bekannt für ihre langen Hälse.</td>
+        </tr>
+        <tr>
+            <td>Zebra</td>
+            <td><img src="" alt="Zebra"></td>
+            <td>Zebras haben einzigartige schwarz-weiße Streifen.</td>
+        </tr>
+        <tr>
+            <td>Flamingo</td>
+            <td><img src="" alt="Flamingo"></td>
+            <td>Flamingos haben ein auffälliges rosa Gefieder.</td>
+        </tr>
+        <tr>
+            <td>Pinguin</td>
+            <td><img src="" alt="Pinguin"></td>
+            <td>Pinguine sind flugunfähige Vögel, die im Wasser leben.</td>
+        </tr>
+        <tr>
+            <td>Panda</td>
+            <td><img src="" alt="Panda"></td>
+            <td>Pandas sind in China beheimatet und lieben Bambus.</td>
+        </tr>
+        <tr>
+            <td>Krokodil</td>
+            <td><img src="" alt="Krokodil"></td>
+            <td>Krokodile sind mächtige Reptilien, die in Flüssen leben.</td>
+        </tr>
+        <tr>
+            <td>Ameisenbär</td>
+            <td><img src="" alt="Ameisenbär"></td>
+            <td>Ameisenbären ernähren sich hauptsächlich von Ameisen und Termiten.</td>
+        </tr>
+        <tr>
+            <td>Fuchs</td>
+            <td><img src="" alt="Fuchs"></td>
+            <td>Füchse sind schlaue Tiere und in vielen Regionen der Welt verbreitet.</td>
+        </tr>
+    </table>
 
-    <div id="tier-info" class="tier-info"></div>
-
-    <script src="script.js"></script>
 </body>
 </html>
