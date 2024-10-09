@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="styles.css">
     <title>Saisonkarte Verlängern</title>
 
-
     <style>
         body {
-            background-image: url('green.webp'); 
+            background: linear-gradient(rgb(240, 248, 255, .7), rgb(0, 128, 0, .8) );
+          
             background-size: cover;  
             background-position: center; 
             background-repeat: no-repeat;  
@@ -36,7 +36,7 @@
             background-color: #f3f3c6;
             padding: 20px;
             border: 1px solid #ccc;
-            margin-bottom: 20px;
+            margin-bottom: 2background: linear-gradient(rgb(240, 248, 255, .7), rgb(0, 128, 0, .8) );0px;
             text-align: center;
         }
 
@@ -107,6 +107,42 @@
             color: #666;
         }
 
+        .slider-container {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+        }
+
+        #prev, #next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -142,7 +178,6 @@
                 <button type="submit">Verlängern</button>
             </form>
         </section>
-      
 
         <h1>Zoo-Karte - Tier Steckbriefe</h1>
        
@@ -165,19 +200,28 @@
         </div>
 
         <button class="button" onclick="updateInfo()">Öffnungszeiten & Fütterung aktualisieren</button>
+
+        <div class="slider-container">
+            <div class="slider">
+                <img src="/images-zootiere/Affe_istockphoto-981458920-612x612.jpg" alt="Bild 1">
+                <img src="/images-zootiere/cheetah_pexels-photo-25956267.webp" alt="Bild 2">
+                <img src="/images-zootiere/flamingo_free-photo-of-zoo-vogel-flamingos-tierfotografie.jpeg" alt="Bild 3">
+                <img src="/images-zootiere/Löwe_istockphoto-933863084-612x612.jpg" alt="Bild 4">
+                <img src="/images-zootiere/Elefant_free-photo-of-schwarz-und-weiss-schwarzweiss-tier-afrika.jpeg" alt="Bild 5">
+            </div>
+            <button id="prev">❮</button>
+            <button id="next">❯</button>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Zoo Hannover</p>
+        <p>
+            Hier kommt die interaktive Karte (Map) vom Park mit Hyperlinks zu den jeweiligen HTML Seiten.
+        </p>
+        <a href="login.html">Login</a>
     </footer>
 
-    <p>
-        Hier kommt die interaktive Karte (Map) vom Park mit Hyperlinks zu den jeweiligen HTML Seiten.
-    </p>
-
-    <a href="http://">login</a>
-
-    
     <script src="script.js"></script>
 </body>
 </html>
