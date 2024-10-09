@@ -67,7 +67,7 @@ function zeigeTierInfo(tierKey) {
 document.querySelectorAll('.tier-item').forEach(item => {
     item.addEventListener('click', (e) => {
         const tierKey = e.target.getAttribute('data-tier');
-        zeigeTierInfo(tierKey.toLowerCase());  // TierKey wird in Kleinbuchstaben umgewandelt
+        zeigeTierInfo(tierKey.toLowerCase()); 
     });
 });
 
@@ -78,15 +78,14 @@ function updateInfo() {
     const currentDate = new Date();
     const currentDay = currentDate.getDay(); 
 
-
-
+    // Öffnungszeiten aktualisieren
     if (currentDay === 6 || currentDay === 0) { 
         openingHoursElement.innerHTML = 'Heute: 9:00 - 19:00 Uhr';
     } else {
         openingHoursElement.innerHTML = 'Heute: 9:00 - 18:00 Uhr';
     }
 
-   
+    
     const feedings = [
         "Löwen: 12:00 Uhr",
         "Elefanten: 14:00 Uhr",
@@ -96,5 +95,41 @@ function updateInfo() {
     feedingTimeElement.innerHTML = randomFeeding;
 }
 
-
 document.addEventListener('DOMContentLoaded', updateInfo);
+
+
+const slider = document.querySelector('.slider');
+const images = document.querySelectorAll('.slider img');
+
+let counter = 0;
+
+function updateSliderWidth() {
+    const size = images[0].clientWidth;
+    slider.style.transform = `translateX(${-size * counter}px)`;
+}
+
+
+window.addEventListener('load', updateSliderWidth);
+window.addEventListener('resize', updateSliderWidth); 
+
+
+document.getElementById('next').addEventListener('click', () => {
+    if (counter >= images.length - 1) return; 
+    slider.style.transition = "transform 0.5s ease-in-out"; 
+    counter++;
+    updateSliderWidth();
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+    if (counter <= 0) return; 
+    slider.style.transition = "transform 0.5s ease-in-out";
+    counter--;
+    updateSliderWidth();
+});
+
+setInterval(() => {
+    if (counter >= images.length - 1) {
+        counter = -1; 
+    }
+    document.getElementById('next').click();
+}, 3000); 
