@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../images/mini_istockphoto-1406563560-612x612.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Saisonkarte Verlängern</title>
+
+    <style>
+        body {
+            background: linear-gradient(rgb(240, 248, 255, .7), rgb(0, 128, 0, .8) );
+          
+            background-size: cover;  
+            background-position: center; 
+            background-repeat: no-repeat;  
+            height: 100vh; 
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 50px;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+        }
+
+        .info-box {
+            background-color: #f3f3c6;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            background: linear-gradient(rgb(240, 248, 255, .7), rgb(0, 128, 0, .8) );
+            text-align: center;
+        }
+
+        .info-box h2 {
+            color: green;
+        }
+
+        .button {
+            padding: 10px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: darkgreen;
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Saisonkarte Verlängern</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Verlängere deine Zoo-Saisonkarte</h2>
+            <form action="process-order.php" method="POST" id="ticketForm">
+                <label for="ticketType">Ticket-Typ:</label>
+                <select id="ticketType" name="ticketType" required>
+                    <option value="">Bitte auswählen</option>
+                    <option value="erwachsener">Erwachsener</option>
+                    <option value="kind">Kind</option>
+                    <option value="familie">Familienkarte</option>
+                </select>
+
+                <label for="ticketDuration">Verlängerungsdauer:</label>
+                <select id="ticketDuration" name="ticketDuration" required>
+                    <option value="">Bitte auswählen</option>
+                    <option value="1Jahr">1 Jahr</option>
+                    <option value="2Jahre">2 Jahre</option>
+                </select>
+
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" placeholder="E-Mail-Adresse" required>
+
+                <label for="cardNumber">Kartennummer:</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="Kartennummer" required>
+
+                <button type="submit">Verlängern</button>
+            </form>
+        </section>
+
+        
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Zoo Hannover</p>
+        <p>
+            Hier kommt die interaktive Karte (Map) vom Park mit Hyperlinks zu den jeweiligen HTML Seiten.
+        </p>
+        <a href="login.html">Login</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
