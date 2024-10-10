@@ -9,21 +9,67 @@
 </head>
 <body>
     <style>
+        header {
+    margin-top: 15px; 
+    height: 3em;
+    background-image: url(./green.webp);
+    /* width: 100%; */
+    text-align: center;
+   
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(1, 24, 1); 
+        
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+
+    border: .3px solid rgb(6, 108, 32);
+    border-radius: 15px;
+
+    box-shadow: 3px 10px 5px darkolivegreen;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+        header h1 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* color: darkgreen; */
+            padding-bottom: 5px;
+            /* font-style: italic; */
+            font-size: larger;
+            color: rgb(1, 24, 1);
+        }
         body {
-            margin-top: 70px;
+            margin-top: 20px;
             /* background-image: url(./green.webp);
             background-size: cover; */
             background: linear-gradient(rgba(120, 147, 87, 0.3), rgb(240, 248, 255, .7), rgba(0, 80, 0, 0.8) );
         }
+        button {
+            text-shadow: 1px 2px darkgreen;
+            font-weight: 700;
+        }
+        
+        body {
+            margin-top: 80px;
+            /* background-image: url(./green.webp);
+            background-size: cover; */
+            background: linear-gradient(rgba(120, 147, 87, 0.3), rgb(240, 248, 255, .7), rgba(0, 80, 0, 0.8) );
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
         table {
-            width: 100%;
+            width: 90%;
+            margin: 0 auto;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 120px;
+            line-height: 1.6;
+            
         }
         th, td {
-            border: 1px solid #ddd;
+            border: 1px solid rgb(5, 59, 24, .15);
             padding: 8px;
             text-align: left;
+            padding: 15px;
         }
         th {
             background-color: #f2f2f2;
@@ -33,6 +79,21 @@
             height: 100px;
             object-fit: cover;
         }
+        span {
+            font-weight: bold;
+        }
+
+ footer {
+    background-color: rgb(51, 51, 51, .55);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px; 
+}
+
     </style>
 </head>
 <body>
@@ -40,14 +101,7 @@
     <h1>Eintrittspreise & Öffnungszeiten</h1>
 </header>
     
-    <p>
-        hier kommen Eintrittspreise,
-        Öffnungszeiten,
-        Saisonskarten,um 12:15?
-        Anfahrt 
-        usw  hin.
-
-    </p>
+   
     <table>
         <tr>
             <th>Kategorie</th>
@@ -55,21 +109,24 @@
         </tr>
         <tr>
             <td>Eintrittspreise</td>
-            <td>Erwachsene: 10€, Kinder: 5€, Studenten: 7€</td>
+            <td>Erwachsene: <span>10€</span><br> Kinder: <span>5€</span><br> Studenten: <span>7€</span></td>
         </tr>
         <tr>
             <td>Öffnungszeiten</td>
-            <td>Montag - Freitag: 09:00 - 18:00 Uhr, Samstag - Sonntag: 09:00 - 20:00 Uhr</td>
+            <td>Montag - Freitag: 09:00 - 18:00 Uhr <br>
+                 Samstag - Sonntag: 09:00 - 20:00 Uhr</td>
         </tr>
         <tr>
             <td>Saisonskarten</td>
-            <td>Jahreskarte: 80€, Familienkarte: 150€</td>
+            <td>Jahreskarte: <span>80€</span> <br> Familienkarte: <span>150€</span></td>
         </tr>
         <tr>
             <td>Anfahrt</td>
-            <td>Adresse: Zoo Hannover Straße 1, 12345 Tierstadt, Öffentliche Verkehrsmittel: Bus Linie 10</td>
+            <td>Adresse: Zoo Hannover Straße 1, 12345 Tierstadt, <br>Öffentliche Verkehrsmittel: Bus Linie 10</td>
         </tr>
     </table>
-
+    <footer>
+        <p>&copy; 2024 WebDev Zoo </p>
+    </footer>
 </body>
 </html>
