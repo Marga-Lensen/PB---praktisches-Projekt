@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../images/mini_istockphoto-1406563560-612x612.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Saisonkarte Verlängern</title>
+
+    <style>
+        body {
+            background: linear-gradient(rgb(240, 248, 255, .7), rgb(0, 128, 0, .8) );
+          
+            background-size: cover;  
+            background-position: center; 
+            background-repeat: no-repeat;  
+            height: 100vh; 
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 50px;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+        }
+
+        .info-box {
+            background-color: #f3f3c6;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            background: linear-gradient(rgb(240, 248, 255, .7), rgb(0, 128, 0, .8) );
+            text-align: center;
+        }
+
+        .info-box h2 {
+            color: green;
+        }
+
+        .button {
+            padding: 10px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: darkgreen;
+        }
+
+        .tier-info {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .tier-item {
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            background-color: lightblue;
+            display: inline-block;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        form input, form select {
+            margin-top: 5px;
+            padding: 8px;
+            width: 200px;
+        }
+
+        form button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: darkgreen;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+        }
+
+        #prev, #next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Saisonkarte Verlängern</h1>
+    </header>
+
+    <main>
+        
+
+        <h1>Zoo-Karte - Tier Steckbriefe</h1>
+       
+        <div id="zoo-map">
+            <div class="tier-item" data-tier="elefant">🐘 Afrikanischer Elefant</div>
+            <div class="tier-item" data-tier="löwe">🦁 Löwe</div>
+            <div class="tier-item" data-tier="affe">🐒 Affe</div>
+        </div>
+
+        <div id="tier-info" class="tier-info"></div>
+
+        <div class="info-box" id="opening-hours">
+            <h2>Öffnungszeiten</h2>
+            <p id="hours">Heute: 9:00 - 18:00 Uhr</p>
+        </div>
+
+        <div class="info-box" id="feeding-time">
+            <h2>Nächste Fütterung</h2>
+            <p id="feeding">Orang-Utans/Bonobos: 13:30 Uhr</p>
+        </div>
+
+        <button class="button" onclick="updateInfo()">Öffnungszeiten & Fütterung aktualisieren</button>
+
+        <div class="slider-container">
+            <div class="slider">
+                <img src="/images-zootiere/Affe_istockphoto-981458920-612x612.jpg" alt="Bild 1">
+                <img src="/images-zootiere/cheetah_pexels-photo-25956267.webp" alt="Bild 2">
+                <img src="/images-zootiere/flamingo_free-photo-of-zoo-vogel-flamingos-tierfotografie.jpeg" alt="Bild 3">
+                <img src="/images-zootiere/Löwe_istockphoto-933863084-612x612.jpg" alt="Bild 4">
+                <img src="/images-zootiere/Elefant_free-photo-of-schwarz-und-weiss-schwarzweiss-tier-afrika.jpeg" alt="Bild 5">
+            </div>
+            <button id="prev">❮</button>
+            <button id="next">❯</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WebDev Zoo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
