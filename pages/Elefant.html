@@ -9,24 +9,55 @@
     <title>Saisonkarte Verlängern</title>
 
     <style>
+
+    header {
+    margin-bottom: 15px;
+    height: 3em;
+    background-image: url(./green.webp);
+    /* width: 100%; */
+    text-align: center;
+ 
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(1, 24, 1); 
+        
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+
+    border: .3px solid rgb(6, 108, 32);
+    border-radius: 15px;
+
+    box-shadow: 3px 10px 5px darkolivegreen;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+        header h1 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* color: darkgreen; */
+            padding-bottom: 5px;
+            /* font-style: italic; */
+            font-size: larger;
+            color: rgb(1, 24, 1);
+        }
         body {
-            background: linear-gradient(rgb(240, 248, 255, .7), rgb(0, 128, 0, .8) );
-          
-            background-size: cover;  
-            background-position: center; 
-            background-repeat: no-repeat;  
-            height: 100vh; 
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
+            margin-top: 90px;
+            /* background-image: url(./green.webp);
+            background-size: cover; */
+            background: linear-gradient(rgba(120, 147, 87, 0.3), rgb(240, 248, 255, .7), rgba(0, 80, 0, 0.8) );
+            background-repeat: no-repeat;
+        }
+        button {
+            text-shadow: 1px 2px rgb(3, 65, 3, .7);
+            font-weight: 700;
+        }
+        footer{
+            color: white#ccc;
+        background-color: rgb(51, 51, 51, .3);
         }
 
-        h1 {
-            text-align: center;
-            padding-top: 50px;
-            color: #333;
-        }
 
+        
         p {
             text-align: center;
             color: #666;
@@ -69,92 +100,21 @@
             cursor: pointer;
             margin: 5px;
             padding: 10px;
-            background-color: lightblue;
+            background-color: rgb(8, 86, 34, .5);
             display: inline-block;
         }
 
-        form {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        form label {
-            display: block;
-            margin-top: 10px;
-        }
-
-        form input, form select {
-            margin-top: 5px;
-            padding: 8px;
-            width: 200px;
-        }
-
-        form button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: green;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        form button:hover {
-            background-color: darkgreen;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #666;
-        }
-
-        .slider-container {
-            position: relative;
-            width: 80%;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slider img {
-            width: 100%;
-            height: auto;
-        }
-
-        #prev, #next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-        #prev {
-            left: 10px;
-        }
-
-        #next {
-            right: 10px;
-        }
+        
     </style>
 </head>
 <body>
-    <header>
-        <h1>Saisonkarte Verlängern</h1>
-    </header>
-
+    
     <main>
         
 
-        <h1>Zoo-Karte - Tier Steckbriefe</h1>
+        <header>
+            <h1>Tier Steckbriefe</h1>
+        </header>
        
         <div id="zoo-map">
             <div class="tier-item" data-tier="elefant">🐘 Afrikanischer Elefant</div>
@@ -164,29 +124,7 @@
 
         <div id="tier-info" class="tier-info"></div>
 
-        <div class="info-box" id="opening-hours">
-            <h2>Öffnungszeiten</h2>
-            <p id="hours">Heute: 9:00 - 18:00 Uhr</p>
-        </div>
-
-        <div class="info-box" id="feeding-time">
-            <h2>Nächste Fütterung</h2>
-            <p id="feeding">Orang-Utans/Bonobos: 13:30 Uhr</p>
-        </div>
-
-        <button class="button" onclick="updateInfo()">Öffnungszeiten & Fütterung aktualisieren</button>
-
-        <div class="slider-container">
-            <div class="slider">
-                <img src="/images-zootiere/Affe_istockphoto-981458920-612x612.jpg" alt="Bild 1">
-                <img src="/images-zootiere/cheetah_pexels-photo-25956267.webp" alt="Bild 2">
-                <img src="/images-zootiere/flamingo_free-photo-of-zoo-vogel-flamingos-tierfotografie.jpeg" alt="Bild 3">
-                <img src="/images-zootiere/Löwe_istockphoto-933863084-612x612.jpg" alt="Bild 4">
-                <img src="/images-zootiere/Elefant_free-photo-of-schwarz-und-weiss-schwarzweiss-tier-afrika.jpeg" alt="Bild 5">
-            </div>
-            <button id="prev">❮</button>
-            <button id="next">❯</button>
-        </div>
+       
     </main>
 
     <footer>
