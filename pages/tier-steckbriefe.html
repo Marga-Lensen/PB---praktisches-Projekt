@@ -1,21 +1,97 @@
-<h1>Zoo-Karte - Tier Steckbriefe</h1>
-       
-        <div id="zoo-map">
-            <div class="tier-item" data-tier="elefant">🐘 Elefant</div>
-            <div class="tier-item" data-tier="löwe">🦁 Löwe</div>
-            <div class="tier-item" data-tier="affe">🐒 Affe</div>
-        </div>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo-Karte - Tier Steckbriefe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(rgb(240, 248, 255, 0.7), rgb(0, 128, 0, 0.8));
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
 
-        <div id="tier-info" class="tier-info"></div>
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
 
-        <div class="info-box" id="opening-hours">
-            <h2>Öffnungszeiten</h2>
-            <p id="hours">Heute: 9:00 - 18:00 Uhr</p>
-        </div>
+        #zoo-map {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
 
-        <div class="info-box" id="feeding-time">
-            <h2>Nächste Fütterung</h2>
-            <p id="feeding">Orang-Utans/Bonobos: 13:30 Uhr</p>
-        </div>
+        .tier-item {
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
 
-        <button class="button" onclick="updateInfo()">Öffnungszeiten & Fütterung aktualisieren</button>
+        .tier-item:hover {
+            background-color: #ddd;
+        }
+
+        #tier-info {
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        .info-box {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Zoo-Karte - Tier Steckbriefe</h1>
+    
+    <div id="zoo-map">
+        <div class="tier-item" data-tier="elefant">🐘 Elefant</div>
+        <div class="tier-item" data-tier="löwe">🦁 Löwe</div>
+        <div class="tier-item" data-tier="affe">🐒 Affe</div>
+    </div>
+
+    <div id="tier-info" class="tier-info"></div>
+
+    <div class="info-box" id="opening-hours">
+        <h2>Öffnu ngszeiten</h2>
+        <p id="hours">Heute: 9:00 - 18:00 Uhr</p>
+    </div>
+
+    <div class="info-box" id="feeding-time">
+        <h2>Nächste Fütterung</h2>
+        <p id="feeding">Orang-Utans/Bonobos: 13:30 Uhr</p>
+    </div>
+
+    <button class="button" onclick="updateInfo()">Öffnungszeiten & Fütterung aktualisieren</button>
+
+     <script src="script.js"></script>
+</body>
+</html>
